@@ -1,22 +1,24 @@
-class Items
-  initialize(type, brand, price)
-  @type = type
-  @brand = brand
-  @price = price
+class Storeitem
+def initialize(input_options)
+  @type = input_options[:item_type]
+  @brand = input_options[:item_brand]
+  @price = input_options[:item_price]
 end
 
 def type
-  return @type
+  @type
 end
 
 def brand
-  return @brand
+  @brand
 end
 
 def price
-  return @price
+  @price
 end
 
-item1 = Items.new("shirt", "polo", 45)
+
+item1 = Storeitem.new({:item_type => "jeans", :item_brand => "levis", :item_price => 30})
 
 p item1
+end
